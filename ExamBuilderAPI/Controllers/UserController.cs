@@ -1,9 +1,5 @@
 ﻿using ExamBuilderAPI.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,18 +9,67 @@ namespace ExamBuilderAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly ILogger<UserController> _logger;
+        private IFirestoreHelper<User> _firestoreHelper;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(IFirestoreHelper<User> firestoreHelper)
         {
-            _logger = logger;
+            _firestoreHelper = firestoreHelper;
         }
 
         [HttpGet]
-        public IEnumerable<User> Get()
+        public async Task<IActionResult> Get(string id)
         {
-            var user = new User() { Name = "Admin", Type = "admin" };
-            return new User[] { user };
+            var data = await this._firestoreHelper.Get("examBuilderUser", id);
+            if (data.Count() > 0)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(User user)
+        {
+            var data = await this._firestoreHelper.Post("examBuilderUser", user);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Put(User user)
+        {
+            var data = await this._firestoreHelper.Put("examBuilderUser", user);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var data = await this._firestoreHelper.Delete("examBuilderUser", id);
+            if (data)
+            {
+                return Ok(true);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }

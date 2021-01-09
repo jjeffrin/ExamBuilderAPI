@@ -1,11 +1,9 @@
 ﻿using Google.Cloud.Firestore;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -26,18 +24,17 @@ namespace ExamBuilderAPI
             _db = FirestoreDb.Create(_projectId);
         }
 
-        public async Task<T> Delete(string collName, string id)
+        public async Task<bool> Delete(string collName, string id)
         {
             var docToDelete = await _db.Collection(collName).Document(id).GetSnapshotAsync();
             var deletedDoc = await _db.Collection(collName).Document(id).DeleteAsync();
             if (deletedDoc.UpdateTime > docToDelete.UpdateTime)
             {
-                var data = default(T);
-                return data;
+                return true;
             }
             else
-            {                
-                return ConvertToUsableData(docToDelete);
+            {
+                return false;
             }
         }
 

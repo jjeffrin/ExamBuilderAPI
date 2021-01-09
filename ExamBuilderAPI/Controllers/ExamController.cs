@@ -1,11 +1,5 @@
 ﻿using ExamBuilderAPI.Models;
-using Google.Cloud.Firestore;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,12 +9,10 @@ namespace ExamBuilderAPI.Controllers
     [ApiController]
     public class ExamController : ControllerBase
     {
-        private readonly ILogger<ExamController> _logger;
         private IFirestoreHelper<Exam> _firestoreHelper;
 
-        public ExamController(ILogger<ExamController> logger, IFirestoreHelper<Exam> firestoreHelper)
+        public ExamController(IFirestoreHelper<Exam> firestoreHelper)
         {
-            _logger = logger;
             _firestoreHelper = firestoreHelper;
         }
 
@@ -39,29 +31,45 @@ namespace ExamBuilderAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<Exam> Post(Exam exam)
+        public async Task<IActionResult> Post(Exam exam)
         {
-            return await this._firestoreHelper.Post("examBuilderExams", exam);
+            var data = await this._firestoreHelper.Post("examBuilderExams", exam);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
         [HttpPut]
-        public async Task<Exam> Put(Exam exam)
+        public async Task<IActionResult> Put(Exam exam)
         {
-            return await this._firestoreHelper.Put("examBuilderExams", exam);
+            var data = await this._firestoreHelper.Put("examBuilderExams", exam);
+            if (data != null)
+            {
+                return Ok(data);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
 
-        //[HttpDelete]
-        //public async Task<IActionResult> Delete(string id)
-        //{
-        //    var data = await this._firestoreHelper.Delete("examBuilderExams", id);
-        //    if (data == null)
-        //    {
-        //        return Ok(true);
-        //    }
-        //    else
-        //    {
-        //        return NotF
-        //    }
-        //}
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var data = await this._firestoreHelper.Delete("examBuilderExams", id);
+            if (data)
+            {
+                return Ok(true);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }
