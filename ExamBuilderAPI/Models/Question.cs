@@ -9,6 +9,7 @@ namespace ExamBuilderAPI.Models
     {
         public string Id { get; set; }
         public string ExamId { get; set; }
+        public string AddedBy { get; set; }
         public string Content { get; set; }
         public string TypeDescription { get; set; }
         public int TypeCode { get; set; }
