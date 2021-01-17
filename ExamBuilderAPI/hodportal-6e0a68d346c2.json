@@ -1,12 +1,3 @@
 {
-  "type": "service_account",
-  "project_id": "hodportal",
-  "private_key_id": "6e0a68d346c23ef725bc27050dea9d58e8d14bf5",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCHmIPfte5bJGh/\nce3Q22x5+kSdp0BnXaGnn0dv8whL/Rz3wLRok4iA4cSSbfnbsqErbMhQTvXgujj0\nDCKfcNoOgWuqV/io5EuSIXwK+cloXQoswTljMvXxgyExFvdphW6+PAj1JUQrz+Aa\nvPv9Eq9MZX4r3YnTVKGFPW8UWMriHAieN3UjXCVOzB/iZ6XenWGmq93bvisGtKWV\nMJTFCUVJRrC0Ylj/3Z7YILjjZ23D5Oz8fYeJew30hGFobsQg6tbuQwcNsEcoSnfe\nuUYN3s2gF5W9qYUN+ThsuSIJHpTtXPdxkRE43XpvJynyxaAN9X4+gbfaSPILPdRB\n+Yq1dU5tAgMBAAECggEAANPdejASFFxUhvKbEPtF3ji40n2C1x6rLeq69OP22P/i\nfWCfuUOtQZwfJwWk0MJ2WV2Am3zf408/qb2pOG/n5M7FaXS//8fk7i9mImsD368x\nsLQ9NW3KMn8qZLJPMEWwN1kGdPiVQe8y3vboUtMaXsz/yCTCApgxpC6LzwP7uQWQ\ngXnuw8kiwPU2IKXbI2aW9Ln9/22R2ncdHkSXiR0IEmp3+BToe5nTP95YTGm9ahdW\nh+SwdRG2DQ5AKgKKsVAeHAFGSrwOVGHyCLiCAQoqJxxhXcLoi96SvSRnsfwEh4NC\n59rkAwxwMvcer5hasFphqAuMkUZ1KtBJLtMvDAjAAQKBgQC/OOaOQHB7AIFZB4Ua\noV1cyTNShGCxNASiymCYxHt2O77xbklODVEkpFl2U25xB2wbj/wLNoNlHmnhxBR2\ncSycwcLtcUs2pF4M682Q3mwxoDDBwrDS4Cghhe0fo53i5expU5sEb0c/GDO/Jp4C\nWEhDkYieM1QIfVyGyiw2K5PtAQKBgQC1h5htd3bXC8EfQ9sAMed4gLQ9oeHGmb+j\nMB4wq7YCm0OpKWBciqvu4NaDW3fRUwfHrQFC4PCK59SZE0LQVueOk0tuFcWp1arf\nAKdnZRmGtApc2YQE4ZSKSJ/0ETTYusYMH18YWKiiHxEUlHL0TAgaZxTePp7egCZs\nwc6xMvhlbQKBgQCWPTuP+nsleREnhOwEL1IuS3qCU7WwpGEcEgtxG7aw/2IXSIJZ\ny8a8FlCf0g9MyPsccLUjjjIQKaQhGLDHGkZl5yqi6cehZ+TpG/+H2emB2A1WvwO0\nux9sr0/N8vxiwClN271I77E3lmlZvxqYVwp35AlF2qgkf3JKCOBRs01nAQKBgH79\nn8WcmDdyUqTjnFYzkyF6sByZnc+IiUbJB6W2yfpi0d+KQY4buJHBGnAEUfrO4hdu\n0P4PTFdwPQrlLY1/7jeQlWkqs//OqN2eoH21fTj9xG4WAMRFZtuiWLuuOdEQQDIE\n1Eq84yOfJhzGiPCcK+MEj9W16v/umHLm1giihqC1AoGAF8tinAXM8MUZrwMLWSHM\nqmXMSDY6AoVj6wRIUIyM9LwNSRbuYNEbtUWhWFjTGCjkeXHlpVQSH7gKDkZ/+tK7\nAm90/nVF0tc6SmOkYbjgkIA8chak3fR0BtmHJ20i1DKeZg9R4PJM50X4PQCYnm2/\na/aQqbYbS7/VkdJa6z8K+B4=\n-----END PRIVATE KEY-----\n",
-  "client_email": "hodportal@appspot.gserviceaccount.com",
-  "client_id": "108707001844618331041",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hodportal%40appspot.gserviceaccount.com"
+  // Removed the contents, for safety reasons.
 }
